@@ -17,42 +17,29 @@ public class ValidacionDeEdad {
         //inicio variables
         
         Scanner leer = new Scanner(System.in);
-        int correcta=0, incorrecta=0, edad= 0;
-        String cadena, nombre;
+        int correcta=0, incorrecta=0, edad= 0, cantidadLista= 0;
+        
+        int mayor = 0, menor= 0;
+        String confirma, nombre="";
         
         //fin variables
         
-         System.out.println("Ingrese Nombre y apellido");
-         nombre = leer.nextLine();
-       
+        System.out.println("bienvenido a la lista de ALumnos, cuanto alumnos va a registrar? ");
+         cantidadLista = leer.nextInt(); //frase inicial
+        
+            
      //inicio while
-        while(!nombre.equalsIgnoreCase("no")){
+        while(cantidadLista !=0){
             
+           
+        System.out.println("Ingrese otro nombre");
+          
+        nombre = leer.nextLine();
             
+          
          System.out.println("AHora ingrese su edad: ");
          edad = leer.nextInt(); //frase inicial
          
-         
-         
-            System.out.println("Ingrese otro nombre");
-            System.out.println("Para finalizar escriba: no ");
-            nombre = leer.nextLine();
-            
-            
-           
-        }
-      //fin while
-     
-      int validar = validar(edad, );
-      
-         System.out.println("Cantidad de mayores: " + mayor);
-         System.out.println("Cadenas incorrectas: "+ menor);
-        }//fin main
-
-    //public  y static son fijos, dps sigue el tipo de dato, dps nombre de funcion. entre parentesis, los parametros que  va a recibir
-    public static int validar(int edad){
-        
-        int mayor = 0, menor= 0;
         //logica
        
             if(edad >18){ //este if es para que la frase que cumpla los 3 requisitos pedidos, puedan almacenarce en una lista de aprobados.
@@ -60,11 +47,24 @@ public class ValidacionDeEdad {
             }else{
                 menor ++;
             }//fin else
+ 
+        cantidadLista --;    
+            //System.out.println("Ahora ingrese su respectiva edad");     
+           
+        }
+      //fin while
+     
+      
+        }//fin main
+
+    //public  y static son fijos, dps sigue el tipo de dato, dps nombre de funcion. entre parentesis, los parametros que  va a recibir
+    //public static int validar(int edad){
+        
         
         
         //En el cuerpo siempre poner RETURN
-        return mayor, menor; 
-    }// fin subprograma 
+        
+    //}// fin subprograma 
 
     
 }//fin public main
